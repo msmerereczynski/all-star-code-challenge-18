@@ -25,16 +25,23 @@ namespace all_star_code_challenge__18
         }
         static void Main(string[] args)
         {
+            bool validWord = false;
             Console.WriteLine("Please give me the word!: ");
             str = Console.ReadLine();
-            Console.WriteLine("Please give me the letter!: ");
-            //try
-            //{
-                letter = Convert.ToChar(Console.ReadLine());
-            //}
-            //catch {
-            //    Console.WriteLine("Please ");
-            //}
+            bool validChar = false;
+            while (!validChar)
+            {
+                Console.WriteLine("Enter a character: ");
+                string input = Console.ReadLine();
+                if (input.Length==1 && Char.IsLetter(input[0])) { 
+                    letter = input[0];
+                    validChar = true;   
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter single letter.");
+                }
+            }
             int count = StrCount(str, letter);
             Console.WriteLine($"Amount of '{letter}' in '{str}' is '{count}'");
             Console.ReadKey();
