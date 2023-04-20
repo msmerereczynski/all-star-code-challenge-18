@@ -25,9 +25,13 @@ namespace all_star_code_challenge__18
         }
         static void Main(string[] args)
         {
-            bool validWord = false;
-            Console.WriteLine("Please give me the word!: ");
+            Console.WriteLine("Enter a string(word):");
             str = Console.ReadLine();
+            while (string.IsNullOrEmpty(str)||!str.All(char.IsLetter))
+            {
+                Console.WriteLine("Enter a word that contains letters only and it does");
+                str = Console.ReadLine();
+            }
             bool validChar = false;
             while (!validChar)
             {
