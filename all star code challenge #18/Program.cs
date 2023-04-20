@@ -10,6 +10,7 @@ namespace all_star_code_challenge__18
     {
         static void Main(string[] args)
         {
+            //to jest testowy komentarz
         }
     }
 }
