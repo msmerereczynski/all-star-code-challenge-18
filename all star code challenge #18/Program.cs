@@ -27,7 +27,7 @@ namespace all_star_code_challenge__18
         {
             Console.WriteLine("Enter a string(word):");
             str = Console.ReadLine();
-            while (string.IsNullOrEmpty(str)||!str.All(char.IsLetter))
+            while (!str.All(char.IsLetter))
             {
                 Console.WriteLine("Enter a word that contains letters only and it does");
                 str = Console.ReadLine();
